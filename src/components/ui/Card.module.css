@@ -1,0 +1,15 @@
+.card {
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

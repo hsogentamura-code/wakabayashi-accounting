@@ -1,0 +1,171 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+:root {
+  --color-primary: #2f5d62;
+  --color-secondary: #5e8b7e;
+  --color-accent: #d68c45;
+  --color-background: #f9f9f9;
+  --color-surface: #fff;
+  --color-text-main: #333;
+  --color-text-muted: #666;
+  --color-border: #e0e0e0;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --font-family-base: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 15px;
+  }
+}
+
+/* [project]/src/components/layout/Header.module.css [app-client] (css) */
+.Header-module__lnUIdW__header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.Header-module__lnUIdW__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__lnUIdW__brand {
+  text-decoration: none;
+}
+
+.Header-module__lnUIdW__title {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  margin: 0;
+}
+
+.Header-module__lnUIdW__nav {
+  margin-top: var(--spacing-sm);
+}
+
+.Header-module__lnUIdW__navList {
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.Header-module__lnUIdW__navLink {
+  color: var(--color-text-main);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: color .2s, background-color .2s;
+}
+
+.Header-module__lnUIdW__navLink:hover {
+  color: var(--color-primary);
+  background-color: #f0f4f4;
+}
+
+@media (max-width: 600px) {
+  .Header-module__lnUIdW__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Header-module__lnUIdW__nav {
+    width: 100%;
+    margin-top: var(--spacing-md);
+  }
+
+  .Header-module__lnUIdW__navList {
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+  }
+
+  .Header-module__lnUIdW__navLink {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-xs);
+  }
+}
+
+/* [project]/src/components/layout/Footer.module.css [app-client] (css) */
+.Footer-module__3hUVsW__footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-lg) 0;
+  margin-top: var(--spacing-xl);
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.Footer-module__3hUVsW__container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Footer-module__3hUVsW__links {
+  gap: var(--spacing-md);
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .Footer-module__3hUVsW__container {
+    gap: var(--spacing-sm);
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=src_cd2604c9._.css.map*/

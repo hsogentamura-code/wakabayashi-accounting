@@ -1,0 +1,2 @@
+This is a test file for Cloudinary upload verification.
+If you can see this content, the file download was successful.

@@ -1,0 +1,56 @@
+/* [project]/src/components/ui/Button.module.css [app-client] (css) */
+.Button-module__8RiFmG__button {
+  cursor: pointer;
+  border: 1px solid #0000;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  transition: all .2s;
+  display: inline-flex;
+}
+
+.Button-module__8RiFmG__primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.Button-module__8RiFmG__primary:hover {
+  background-color: var(--color-secondary);
+}
+
+.Button-module__8RiFmG__secondary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.Button-module__8RiFmG__secondary:hover {
+  opacity: .9;
+}
+
+.Button-module__8RiFmG__outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: #0000;
+}
+
+.Button-module__8RiFmG__outline:hover {
+  background-color: #2f5d620d;
+}
+
+.Button-module__8RiFmG__sm {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.Button-module__8RiFmG__md {
+  font-size: var(--font-size-base);
+  padding: 8px 16px;
+}
+
+.Button-module__8RiFmG__lg {
+  font-size: var(--font-size-lg);
+  padding: 12px 24px;
+}
+
+/*# sourceMappingURL=src_components_ui_Button_module_css_bad6b30c._.single.css.map*/

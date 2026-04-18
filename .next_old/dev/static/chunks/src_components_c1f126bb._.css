@@ -1,0 +1,87 @@
+/* [project]/src/components/ui/PageTitle.module.css [app-client] (css) */
+.PageTitle-module__zMWopG__container {
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--spacing-sm);
+}
+
+.PageTitle-module__zMWopG__title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.PageTitle-module__zMWopG__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+}
+
+/* [project]/src/components/features/ArticleList.module.css [app-client] (css) */
+.ArticleList-module__Qc0FNG__list {
+  flex-direction: column;
+  display: flex;
+}
+
+.ArticleList-module__Qc0FNG__link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.ArticleList-module__Qc0FNG__listItem {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  background-color: #fff;
+  transition: background-color .2s;
+}
+
+.ArticleList-module__Qc0FNG__listItem:hover {
+  background-color: #f9f9f9;
+}
+
+.ArticleList-module__Qc0FNG__itemMeta {
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+}
+
+.ArticleList-module__Qc0FNG__badge {
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ArticleList-module__Qc0FNG__badge.ArticleList-module__Qc0FNG__circular {
+  background-color: var(--color-secondary);
+}
+
+.ArticleList-module__Qc0FNG__badge.ArticleList-module__Qc0FNG__obituary {
+  background-color: #888;
+}
+
+.ArticleList-module__Qc0FNG__badge.ArticleList-module__Qc0FNG__announcement {
+  background-color: var(--color-accent);
+}
+
+.ArticleList-module__Qc0FNG__date {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.ArticleList-module__Qc0FNG__itemTitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-main);
+  margin: 0;
+  font-weight: bold;
+}
+
+.ArticleList-module__Qc0FNG__empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--spacing-xl);
+}
+
+/*# sourceMappingURL=src_components_c1f126bb._.css.map*/

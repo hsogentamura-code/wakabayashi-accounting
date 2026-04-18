@@ -1,0 +1,68 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+:root {
+  --color-primary: #2f5d62;
+  --color-secondary: #5e8b7e;
+  --color-accent: #d68c45;
+  --color-background: #f9f9f9;
+  --color-surface: #fff;
+  --color-text-main: #333;
+  --color-text-muted: #666;
+  --color-border: #e0e0e0;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --font-family-base: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 15px;
+  }
+}
+
+/*# sourceMappingURL=src_app_globals_css_bad6b30c._.single.css.map*/

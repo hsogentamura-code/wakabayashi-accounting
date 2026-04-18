@@ -1,0 +1,141 @@
+.pageTitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: var(--spacing-sm);
+}
+
+.ledgerContainer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+.ledgerTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.ledgerTable th,
+.ledgerTable td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ledgerTable th:not(:last-child),
+.ledgerTable td:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+}
+
+.ledgerTable th {
+    background-color: #f5f8fa;
+    color: var(--color-primary);
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center !important;
+}
+
+.amountHeader {
+    text-align: right !important;
+    width: 120px;
+}
+
+.dateCell {
+    white-space: nowrap;
+    width: 120px;
+    color: var(--color-text-muted);
+}
+
+.categoryBadge {
+    background-color: #e0e0e0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #333;
+    display: inline-block;
+}
+
+.categoryCell {
+    text-align: center !important;
+    white-space: nowrap;
+    width: 1%; /* Fit to content */
+}
+
+.centerCell {
+    text-align: center !important;
+}
+
+.descCell {
+    color: var(--color-text-main);
+}
+
+.amountCell {
+    text-align: right !important;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.incomeText {
+    color: #28a745;
+}
+
+.expenseText {
+    color: #dc3545;
+}
+
+.balanceText {
+    color: #212529; /* Dark, strong color for balance */
+    font-size: 17px; /* slightly larger */
+}
+
+.expenseCol {
+    /* Optional: any specific styles for expense column */
+}
+
+.receiptCell {
+    text-align: center;
+    width: 80px;
+}
+
+.receiptLink {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.receiptLink:hover {
+    text-decoration: underline;
+}
+
+.emptyMessage {
+    padding: var(--spacing-xxl);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.paginationWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.ledgerRow {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ledgerRow:hover {
+    background-color: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+    .mobileHide {
+        display: none;
+    }
+}

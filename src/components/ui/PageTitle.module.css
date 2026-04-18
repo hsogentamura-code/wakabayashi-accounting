@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: var(--spacing-sm);
+}
+
+.title {
+    font-size: var(--font-size-xxl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+}

@@ -1,0 +1,55 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* Variants */
+.primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.primary:hover {
+    background-color: var(--color-secondary);
+}
+
+.secondary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.secondary:hover {
+    opacity: 0.9;
+}
+
+.outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.outline:hover {
+    background-color: rgba(47, 93, 98, 0.05);
+}
+
+/* Sizes */
+.sm {
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+.md {
+    font-size: var(--font-size-base);
+    padding: 8px 16px;
+}
+
+.lg {
+    font-size: var(--font-size-lg);
+    padding: 12px 24px;
+}

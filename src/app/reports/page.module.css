@@ -1,0 +1,211 @@
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.summaryCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 5px solid var(--color-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summaryCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summaryCard:nth-child(1) {
+    border-left-color: #28a745;
+}
+
+.summaryCard:nth-child(2) {
+    border-left-color: #dc3545;
+}
+
+.summaryCard:nth-child(3) {
+    border-left-color: #007bff;
+}
+
+.cardHeader {
+    font-size: 1.1rem;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.amountIncome {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28a745;
+}
+
+.amountExpense {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #dc3545;
+}
+
+.amountBalance {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Charts Grid */
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.chartCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.chartTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.chartWrapper {
+    flex-grow: 1;
+    min-height: 300px;
+}
+
+.emptyChart {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+    font-style: italic;
+    min-height: 200px;
+}
+
+/* List Table */
+.listContainer {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tableResponsive {
+    overflow-x: auto;
+}
+
+.adminTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.adminTable th,
+.adminTable td {
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.adminTable th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.adminTable tr:hover {
+    background-color: #f8f9fa;
+}
+
+.badge {
+    background-color: #e9ecef;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #495057;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.incomeText {
+    text-align: right;
+    color: #28a745;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.expenseText {
+    text-align: right;
+    color: #dc3545;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.amountCell {
+    text-align: right;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.emptyMessage {
+    padding: var(--spacing-xxl);
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chartsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chartCard {
+        grid-column: 1 / -1 !important;
+    }
+}

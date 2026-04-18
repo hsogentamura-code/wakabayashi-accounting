@@ -1,0 +1,19 @@
+/* [project]/src/components/ui/PageTitle.module.css [app-client] (css) */
+.PageTitle-module__zMWopG__container {
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--spacing-sm);
+}
+
+.PageTitle-module__zMWopG__title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.PageTitle-module__zMWopG__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+}
+
+/*# sourceMappingURL=src_components_ui_PageTitle_module_css_bad6b30c._.single.css.map*/

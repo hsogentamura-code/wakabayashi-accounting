@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/ui/PageTitle.module.css"],"sourcesContent":[".container {\n    margin-bottom: var(--spacing-xl);\n    border-bottom: 2px solid var(--color-primary);\n    padding-bottom: var(--spacing-sm);\n}\n\n.title {\n    font-size: var(--font-size-xxl);\n    color: var(--color-primary);\n    margin-bottom: var(--spacing-xs);\n}\n\n.subtitle {\n    color: var(--color-text-muted);\n    font-size: var(--font-size-base);\n}"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;AAMA"}}]
+}

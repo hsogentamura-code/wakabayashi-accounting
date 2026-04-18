@@ -1,0 +1,191 @@
+.headerActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.backButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.backButton:hover {
+    background-color: #f1f5f9;
+}
+
+.adminActions {
+    display: flex;
+    gap: 8px;
+}
+
+.editButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2F5D62;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.editButton:hover {
+    background-color: #1e3f42;
+}
+
+.detailContainer {
+    background-color: white;
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.metaHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.income {
+    background-color: #4a9b8e;
+}
+
+.badge.expense {
+    background-color: #e57373;
+}
+
+.categoryBadge {
+    background-color: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.date {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.title {
+    font-size: 24px;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.4;
+}
+
+.amountBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 6px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.amountLabel {
+    font-size: 16px;
+    color: #64748b;
+    font-weight: bold;
+}
+
+.amountValue {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.incomeText {
+    color: #0f766e;
+}
+
+.expenseText {
+    color: #b91c1c;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.contentSection {
+    margin-bottom: var(--spacing-xl);
+}
+
+.richContent {
+    line-height: 1.6;
+    color: var(--color-text-main);
+}
+
+.richContent p {
+    margin-bottom: 1em;
+}
+
+.richContent a {
+    color: #2F5D62;
+    text-decoration: underline;
+}
+
+.attachmentsSection {
+    margin-top: var(--spacing-xl);
+}
+
+.attachmentList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.attachmentItem {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: var(--spacing-sm);
+}
+
+.otherFileLink {
+    color: #2F5D62;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.otherFileLink:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .detailContainer {
+        padding: var(--spacing-md);
+    }
+
+    .amountValue {
+        font-size: 24px;
+    }
+}
