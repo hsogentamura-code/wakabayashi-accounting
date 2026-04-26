@@ -59,14 +59,14 @@ export default async function TransactionDetailPage({ params }: PageProps) {
 
             <article className={styles.detailContainer}>
                 <div className={styles.metaHeader}>
-                    <span className={`${styles.badge} ${isIncome ? styles.income : styles.expense}`}>
-                        {isIncome ? '収入' : '支出'}
-                    </span>
                     {transaction.transaction_number && (
-                        <span className={styles.categoryBadge} style={{ backgroundColor: '#f8fafc' }}>
+                        <span className={styles.categoryBadge} style={{ backgroundColor: '#f8fafc', fontWeight: 'bold' }}>
                             No. {transaction.transaction_number}
                         </span>
                     )}
+                    <span className={`${styles.badge} ${isIncome ? styles.income : styles.expense}`}>
+                        {isIncome ? '収入' : '支出'}
+                    </span>
                     <span className={styles.categoryBadge}>
                         {transaction.categoryId?.order !== undefined && transaction.categoryId?.order !== null ? `${transaction.categoryId.order}: ` : ''}{transaction.categoryId?.name}
                     </span>
