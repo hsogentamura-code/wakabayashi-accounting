@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { isAuthenticated } from '@/lib/auth';
+import { isViewer } from '@/lib/auth';
 import LogoutButton from './LogoutButton';
 import styles from './Header.module.css';
 
 export default async function Header() {
-    const isAdmin = await isAuthenticated();
+    const isLoggedIn = await isViewer();
 
     return (
         <header className={styles.header}>
@@ -29,7 +29,7 @@ export default async function Header() {
                                 レポート
                             </Link>
                         </li>
-                        {isAdmin ? (
+                        {isLoggedIn ? (
                             <li className={styles.navItem}>
                                 <LogoutButton />
                             </li>

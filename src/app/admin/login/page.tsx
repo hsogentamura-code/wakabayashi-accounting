@@ -42,7 +42,7 @@ export default function LoginPage() {
                 width: '100%',
                 maxWidth: '400px'
             }}>
-                <h1 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>管理者ログイン</h1>
+                <h1 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>システムログイン</h1>
                 {error && <p style={{ color: 'red', marginBottom: '1rem' }}>{error}</p>}
                 <div style={{ marginBottom: '1rem' }}>
                     <label style={{ display: 'block', marginBottom: '0.5rem' }}>パスワード</label>
