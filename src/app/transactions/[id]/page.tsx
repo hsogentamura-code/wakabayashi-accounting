@@ -46,6 +46,9 @@ export default async function TransactionDetailPage({ params }: PageProps) {
 
                 {isAdmin && (
                     <div className={styles.adminActions}>
+                        <Link href={`/transactions/duplicate/${transaction.id}`} className={styles.duplicateButton}>
+                            📋 複製
+                        </Link>
                         <Link href={`/transactions/edit/${transaction.id}`} className={styles.editButton}>
                             ✏️ 編集
                         </Link>

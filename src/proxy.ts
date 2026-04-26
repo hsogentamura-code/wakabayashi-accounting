@@ -20,6 +20,7 @@ export function proxy(request: NextRequest) {
     const adminOnlyRoutes = [
         '/transactions/new',
         '/transactions/edit',
+        '/transactions/duplicate',
     ];
 
     if (adminOnlyRoutes.some(r => path.startsWith(r))) {
