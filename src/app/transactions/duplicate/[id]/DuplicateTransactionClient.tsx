@@ -39,7 +39,7 @@ export default function DuplicateTransactionClient({ initialData }: { initialDat
     // In our new schema, content is stored as `<p>...</p>`, so we strip basic <p> tags for the textarea
     const cleanContentForEditor = (htmlStr: string | undefined) => {
         if (!htmlStr) return '';
-        return htmlStr.replace(/^<p>/, '').replace(/<\/p>$/, '').replace(/<br\/>/g, '\n');
+        return htmlStr.replace(/^<p>/, '').replace(/<\/p>$/, '').replace(/<br\s*\/?>/gi, '\n');
     }
 
     // Form state initialized with existing data
