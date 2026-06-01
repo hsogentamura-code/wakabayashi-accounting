@@ -231,7 +231,6 @@ export default function DuplicateTransactionClient({ initialData }: { initialDat
                         <input
                             type="number"
                             required
-                            min="0"
                             value={amountIncome}
                             onChange={e => setAmountIncome(e.target.value)}
                             className={`${styles.input} no-spin`}
@@ -243,7 +242,6 @@ export default function DuplicateTransactionClient({ initialData }: { initialDat
                         <input
                             type="number"
                             required
-                            min="0"
                             value={amountExpense}
                             onChange={e => setAmountExpense(e.target.value)}
                             className={`${styles.input} no-spin`}

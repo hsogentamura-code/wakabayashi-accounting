@@ -151,7 +151,7 @@ export default function EditTransactionClient({ initialData }: { initialData: Tr
             if (!res.ok) throw new Error('Failed to update transaction');
 
             alert('取引を更新しました。');
-            router.push('/transactions');
+            router.push(`/transactions/${initialData.id}`);
             router.refresh();
         } catch (error) {
             console.error(error);
@@ -231,7 +231,6 @@ export default function EditTransactionClient({ initialData }: { initialData: Tr
                         <input
                             type="number"
                             required
-                            min="0"
                             value={amountIncome}
                             onChange={e => setAmountIncome(e.target.value)}
                             className={`${styles.input} no-spin`}
@@ -243,7 +242,6 @@ export default function EditTransactionClient({ initialData }: { initialData: Tr
                         <input
                             type="number"
                             required
-                            min="0"
                             value={amountExpense}
                             onChange={e => setAmountExpense(e.target.value)}
                             className={`${styles.input} no-spin`}
@@ -311,7 +309,7 @@ export default function EditTransactionClient({ initialData }: { initialData: Tr
                 </div>
 
                 <div className={styles.actions}>
-                    <button type="button" onClick={() => router.back()} className={styles.cancelButton}>
+                    <button type="button" onClick={() => router.push(`/transactions/${initialData.id}`)} className={styles.cancelButton}>
                         キャンセル
                     </button>
                     <button type="submit" disabled={isSubmitting} className={styles.submitButton}>

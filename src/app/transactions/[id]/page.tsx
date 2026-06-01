@@ -59,11 +59,6 @@ export default async function TransactionDetailPage({ params }: PageProps) {
 
             <article className={styles.detailContainer}>
                 <div className={styles.metaHeader}>
-                    {transaction.transaction_number && (
-                        <span className={styles.categoryBadge} style={{ backgroundColor: '#f8fafc', fontWeight: 'bold' }}>
-                            No. {transaction.transaction_number}
-                        </span>
-                    )}
                     <span className={`${styles.badge} ${isIncome ? styles.income : styles.expense}`}>
                         {isIncome ? '収入' : '支出'}
                     </span>
@@ -73,7 +68,13 @@ export default async function TransactionDetailPage({ params }: PageProps) {
                     <span className={styles.date}>{formatDate(transaction.date)}</span>
                 </div>
 
-                <h1 className={styles.title}>
+                {transaction.transaction_number && (
+                    <div style={{ color: '#64748b', fontSize: '16px', marginBottom: '8px', fontWeight: 'bold' }}>
+                        取引番号: {transaction.transaction_number}
+                    </div>
+                )}
+                
+                <h1 className={styles.title} style={{ marginTop: '0' }}>
                     {transaction.description || '（摘要なし）'}
                 </h1>
 
