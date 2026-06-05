@@ -118,13 +118,22 @@ export async function getPaginatedTransactions(offset: number, limit: number): P
 
 import { fetchAllLedgerTransactionsDesc, LedgerTransaction } from './microcms';
 
-export async function getLedgerTransactions(offset: number, limit: number, year?: string, month?: string): Promise<PaginatedResponse<LedgerTransaction>> {
+export async function getLedgerTransactions(offset: number, limit: number, year?: string, month?: string, categoryId?: string): Promise<PaginatedResponse<LedgerTransaction>> {
+    const carryoverKeywords = ['繰越', '前年度繰越金'];
     const filterTransactions = (txs: LedgerTransaction[]) => {
         let filtered = txs;
         if (month) {
             filtered = filtered.filter(t => t.date.startsWith(month));
         } else if (year) {
             filtered = filtered.filter(t => t.date.startsWith(year));
+        }
+        if (categoryId === 'exclude_carryover') {
+            filtered = filtered.filter(t => {
+                const catName = t.categoryId?.name || '';
+                return !carryoverKeywords.some(kw => catName.includes(kw));
+            });
+        } else if (categoryId && categoryId !== 'all') {
+            filtered = filtered.filter(t => t.categoryId?.id === categoryId);
         }
         return filtered;
     };

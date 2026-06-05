@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getLedgerTransactions } from '@/lib/data';
+import { getLedgerTransactions, getCategories } from '@/lib/data';
 import Pagination from '@/components/ui/Pagination';
 import { isAuthenticated } from '@/lib/auth';
 import LedgerTable from './LedgerTable';
@@ -12,15 +12,23 @@ export const metadata = {
 
 const ITEMS_PER_PAGE = 20;
 
-export default async function TransactionsPage(props: { searchParams?: Promise<{ page?: string, year?: string, month?: string }> }) {
+export default async function TransactionsPage(props: { searchParams?: Promise<{ page?: string, year?: string, month?: string, categoryId?: string }> }) {
     const searchParams = await props.searchParams;
     const page = Number(searchParams?.page) || 1;
     const offset = (page - 1) * ITEMS_PER_PAGE;
     
     const year = searchParams?.year;
     const month = searchParams?.month;
+    const categoryId = searchParams?.categoryId;
 
-    const { contents: transactions, totalCount } = await getLedgerTransactions(offset, ITEMS_PER_PAGE, year, month);
+    const [
+        { contents: transactions, totalCount },
+        categories
+    ] = await Promise.all([
+        getLedgerTransactions(offset, ITEMS_PER_PAGE, year, month, categoryId),
+        getCategories()
+    ]);
+    
     const isAdmin = await isAuthenticated();
 
     return (
@@ -34,7 +42,7 @@ export default async function TransactionsPage(props: { searchParams?: Promise<{
                 )}
             </div>
 
-            <TransactionFilter />
+            <TransactionFilter categories={categories} currentCategoryId={categoryId} />
 
             <div className={styles.ledgerContainer}>
                 <LedgerTable transactions={transactions} />
