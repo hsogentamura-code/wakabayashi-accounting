@@ -66,6 +66,12 @@ function safeComparePassword(a: string, b: string): boolean {
     return crypto.timingSafeEqual(hashA, hashB);
 }
 
+export function verifyTokenRole(token: string): Role {
+    const key = getSigningKey();
+    if (!key) return null;
+    return verifySessionToken(token, key);
+}
+
 export async function getSessionRole(): Promise<Role> {
     const key = getSigningKey();
     if (!key) return null;

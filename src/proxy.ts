@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { verifyTokenRole } from '@/lib/auth';
 
 export function proxy(request: NextRequest) {
     const path = request.nextUrl.pathname;
@@ -9,10 +10,11 @@ export function proxy(request: NextRequest) {
         return NextResponse.next();
     }
 
-    const session = request.cookies.get('admin_session')?.value;
+    const sessionCookie = request.cookies.get('admin_session')?.value;
+    const role = sessionCookie ? verifyTokenRole(sessionCookie) : null;
 
     // Require at least a viewer session for all pages
-    if (session !== 'admin' && session !== 'viewer') {
+    if (!role) {
         return NextResponse.redirect(new URL('/admin/login', request.url));
     }
 
@@ -24,7 +26,7 @@ export function proxy(request: NextRequest) {
     ];
 
     if (adminOnlyRoutes.some(r => path.startsWith(r))) {
-        if (session !== 'admin') {
+        if (role !== 'admin') {
             return NextResponse.redirect(new URL('/', request.url)); // Redirect viewers away from admin pages
         }
     }
